@@ -13,7 +13,10 @@
 		</dd>
 		<dt><?php echo __('Description'); ?></dt>
 		<dd>
-			<?php echo $this->TextHighlight->highlightText($department['Department']['description'],'PHP'); ?>
+			<?php
+                        $depatment_description     =$this->TextHighlight->highlightText($department['Department']['description'],'PHP');
+                        $depatment_description     =$this->TextHighlight->italicText($depatment_description,'framework');
+                        echo $depatment_description; ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Created'); ?></dt>

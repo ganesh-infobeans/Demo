@@ -11,7 +11,12 @@
 	<?php foreach ($departments as $department): ?>
 	<tr>
 		<td><?php echo h($department['Department']['name']); ?>&nbsp;</td>
-		<td><?php echo $this->TextHighlight->highlightText($department['Department']['description'],'PHP');  ?>&nbsp;</td>
+		<td><?php 
+                $depatment_description     =$this->TextHighlight->highlightText($department['Department']['description'],'PHP');
+                        $depatment_description     =$this->TextHighlight->italicText($depatment_description,'framework');
+                        echo $depatment_description;
+                
+                ?>&nbsp;</td>
 		<td><?php echo h($department['Department']['created']); ?>&nbsp;</td>
 		<td><?php echo h($department['Department']['modified']); ?>&nbsp;</td>
 		<td class="actions">

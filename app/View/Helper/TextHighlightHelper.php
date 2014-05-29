@@ -33,6 +33,8 @@ class TextHighlightHelper extends Helper {
      * @param string $string
      */
     public function italicText ($fromString,$string) {
-        
+          $result=str_replace($string, "<span style='font-style:italic; color:green'>".$string."</span>", $fromString);
+          return $result;
+
     }
 }
